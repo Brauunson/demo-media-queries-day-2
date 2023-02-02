@@ -6,11 +6,40 @@
     background-color: #b9a072;
     background-color: #b04507;
     background-color: #750119;
+ */
 
-*/
 
 body {
     font-family: 'Noto Sans', sans-serif;
+}
+
+.container{
+    padding: 1rem;
+}
+
+/* --- Typography --- */
+
+h2{
+    font-size: 2rem;
+    padding: 1.5rem 0;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+/* --- Main content --- */
+
+section{
+    margin-bottom:1.5rem;
+}
+
+.container section:nth-of-type(even){
+    background-color: #516241;
+}
+
+.container section:nth-of-type(odd){
+    background-color: #b9a072;
 }
 
 section a {
@@ -24,4 +53,61 @@ section a {
 
 section a:hover {
     background-color: rgba(0,0,0,0.6);
+}
+
+section div{
+    padding: 1.5rem;
+}
+
+@media screen and (min-width:540px){
+    .container section{
+        display: flex;
+        align-items:center;
+    }
+
+    section img,
+    section div{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+
+    .container section{
+        width: calc(98%/2);
+    }
+
+    h2{
+        width: 100%;
+    }
+
+    .container section h2{
+        order: 0;
+    }
+    .container section:nth-child(2){
+        order: 1;
+    }.container section:nth-child(3){
+        order: 2;
+    }.container section:nth-child(4){
+        order: 5;
+    }.container section:nth-child(5){
+        order: 4;
+    }.container section:nth-child(6){
+        order: 6;
+    }.container section:nth-child(7){
+        order: 7;
+    }
+    
+
+}
+
+@media screen and (min-width: 1850px){
+    .container{
+        max-width: 112.5rem;
+    }
 }
